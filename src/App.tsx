@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
+import { Icolaborador } from './shared/interfaces/IColaborador';
 
 function App() {
 
@@ -42,11 +43,10 @@ function App() {
       corSecundaria: '#FFEEDF'
     }
   ]
+  //usando generic para corrigir o erro do tipo "never" em time
+  const [colaboradores, setColaboradores] = useState<Icolaborador[]>([])
 
-  const [colaboradores, setColaboradores] = useState([])
-
-  const aoNovoColaboradorAdicionado = (colaborador) => {
-    debugger
+  const aoNovoColaboradorAdicionado = (colaborador: Icolaborador) => {
     setColaboradores([...colaboradores, colaborador])
   }
 

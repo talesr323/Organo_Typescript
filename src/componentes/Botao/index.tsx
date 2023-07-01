@@ -5,7 +5,8 @@ import './Botao.css';
 
 
 interface BotaoProps {
-    children: ReactElement
+    //pode ser string e pode ser react element 
+    children: ReactElement | string
 }
 
 const Botao = (props: BotaoProps) => {
