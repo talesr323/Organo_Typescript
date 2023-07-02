@@ -16,4 +16,3 @@ const Botao = (props: BotaoProps) => {
 }
 
 export default Botao;
-
